@@ -71,6 +71,14 @@
 		7574EB39209214F100F4169D /* IMGVision */ = {
 			isa = PBXGroup;
 			children = (
+				7574EB56209215E500F4169D /* Models */,
+				7574EB55209215DE00F4169D /* Views */,
+				7574EB54209215D400F4169D /* Controllers */,
+				7574EB53209215C300F4169D /* Networking */,
+				7574EB52209215BB00F4169D /* Config */,
+				7574EB51209215AC00F4169D /* Utilitie */,
+				7574EB502092159F00F4169D /* Storyboard */,
+				7574EB4F2092158E00F4169D /* Resource */,
 				7574EB3A209214F100F4169D /* AppDelegate.swift */,
 				7574EB3C209214F100F4169D /* ViewController.swift */,
 				7574EB3E209214F100F4169D /* Main.storyboard */,
@@ -80,6 +88,62 @@
 				7574EB41209214F100F4169D /* IMGVision.xcdatamodeld */,
 			);
 			path = IMGVision;
+			sourceTree = "<group>";
+		};
+		7574EB4F2092158E00F4169D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		7574EB502092159F00F4169D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		7574EB51209215AC00F4169D /* Utilitie */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilitie;
+			sourceTree = "<group>";
+		};
+		7574EB52209215BB00F4169D /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		7574EB53209215C300F4169D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7574EB54209215D400F4169D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7574EB55209215DE00F4169D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7574EB56209215E500F4169D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		AA922F0B996921BDD5ED8F3A /* Pods */ = {
@@ -331,12 +395,17 @@
 			baseConfigurationReference = F71DE499F82084CE767E7B82 /* Pods-IMGVision.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z6ZF6BB944;
 				INFOPLIST_FILE = IMGVision/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ammYou.IMGVision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -347,12 +416,17 @@
 			baseConfigurationReference = 73512EE33AEA8B4286808ACA /* Pods-IMGVision.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z6ZF6BB944;
 				INFOPLIST_FILE = IMGVision/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ammYou.IMGVision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
