@@ -1,3 +1,32 @@
-PODFILE CHECKSUM: 28ac87f46e34d3bda85280797fa5f8674e2c9c01
+PODS:
+  - Hero (1.2.0)
+  - Spring (1.0.5)
+  - SwiftyJSON (4.1.0)
+
+DEPENDENCIES:
+  - Hero
+  - Spring (from `https://github.com/MengTo/Spring.git`)
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Hero
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  Spring:
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: c540239f3590bbaf4a35c3959c329dd5ed4e3eee
+    :git: https://github.com/MengTo/Spring.git
+
+SPEC CHECKSUMS:
+  Hero: 33dadf2cd1c98af71e213dcbc2902e6e03622a4e
+  Spring: 3c7666eccefdeb87140008dc81043f89f8dbb787
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+
+PODFILE CHECKSUM: eb2db99cc86b895c6341b9ebebbae913b8e38108
 
 COCOAPODS: 1.5.0
