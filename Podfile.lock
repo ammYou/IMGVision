@@ -1,15 +1,18 @@
 PODS:
+  - CircleMenu (3.0.6)
   - Hero (1.2.0)
   - Spring (1.0.5)
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
+  - CircleMenu
   - Hero
   - Spring (from `https://github.com/MengTo/Spring.git`)
   - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - CircleMenu
     - Hero
     - SwiftyJSON
 
@@ -23,10 +26,11 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
+  CircleMenu: 743ac815475e8e40e8848d2954fa7f7263d9f78d
   Hero: 33dadf2cd1c98af71e213dcbc2902e6e03622a4e
   Spring: 3c7666eccefdeb87140008dc81043f89f8dbb787
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: eb2db99cc86b895c6341b9ebebbae913b8e38108
+PODFILE CHECKSUM: 618c98fca791739c8181760c6ef1c45183b131f9
 
 COCOAPODS: 1.5.0

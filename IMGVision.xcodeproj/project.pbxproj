@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		753B011F2098669900DF411C /* icons8-settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 753B011E2098669900DF411C /* icons8-settings.png */; };
+		753B0121209866B100DF411C /* icons8-picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 753B0120209866B100DF411C /* icons8-picture.png */; };
+		753B0123209866C200DF411C /* icons8-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 753B0122209866C200DF411C /* icons8-camera.png */; };
+		75650EE72098A4F700FAD8FE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75650EE62098A4F700FAD8FE /* HomeViewController.swift */; };
+		75650EE92098A53300FAD8FE /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75650EE82098A53300FAD8FE /* CameraViewController.swift */; };
+		75650EEB2098A53D00FAD8FE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75650EEA2098A53D00FAD8FE /* SettingViewController.swift */; };
+		75650EED2098A54A00FAD8FE /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75650EEC2098A54A00FAD8FE /* PictureViewController.swift */; };
 		7574EB3B209214F100F4169D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574EB3A209214F100F4169D /* AppDelegate.swift */; };
 		7574EB3D209214F100F4169D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574EB3C209214F100F4169D /* ViewController.swift */; };
 		7574EB40209214F100F4169D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7574EB3E209214F100F4169D /* Main.storyboard */; };
@@ -18,6 +25,13 @@
 
 /* Begin PBXFileReference section */
 		73512EE33AEA8B4286808ACA /* Pods-IMGVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMGVision.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMGVision/Pods-IMGVision.release.xcconfig"; sourceTree = "<group>"; };
+		753B011E2098669900DF411C /* icons8-settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-settings.png"; sourceTree = "<group>"; };
+		753B0120209866B100DF411C /* icons8-picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-picture.png"; sourceTree = "<group>"; };
+		753B0122209866C200DF411C /* icons8-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-camera.png"; sourceTree = "<group>"; };
+		75650EE62098A4F700FAD8FE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		75650EE82098A53300FAD8FE /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		75650EEA2098A53D00FAD8FE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		75650EEC2098A54A00FAD8FE /* PictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		7574EB37209214F100F4169D /* IMGVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMGVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7574EB3A209214F100F4169D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7574EB3C209214F100F4169D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,13 +85,12 @@
 		7574EB39209214F100F4169D /* IMGVision */ = {
 			isa = PBXGroup;
 			children = (
-				7574EB56209215E500F4169D /* Models */,
 				7574EB55209215DE00F4169D /* Views */,
 				7574EB54209215D400F4169D /* Controllers */,
+				7574EB56209215E500F4169D /* Models */,
 				7574EB53209215C300F4169D /* Networking */,
 				7574EB52209215BB00F4169D /* Config */,
 				7574EB51209215AC00F4169D /* Utilitie */,
-				7574EB502092159F00F4169D /* Storyboard */,
 				7574EB4F2092158E00F4169D /* Resource */,
 				7574EB3A209214F100F4169D /* AppDelegate.swift */,
 				7574EB3C209214F100F4169D /* ViewController.swift */,
@@ -93,15 +106,11 @@
 		7574EB4F2092158E00F4169D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				753B0120209866B100DF411C /* icons8-picture.png */,
+				753B011E2098669900DF411C /* icons8-settings.png */,
+				753B0122209866C200DF411C /* icons8-camera.png */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		7574EB502092159F00F4169D /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		7574EB51209215AC00F4169D /* Utilitie */ = {
@@ -128,6 +137,10 @@
 		7574EB54209215D400F4169D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				75650EE62098A4F700FAD8FE /* HomeViewController.swift */,
+				75650EE82098A53300FAD8FE /* CameraViewController.swift */,
+				75650EEA2098A53D00FAD8FE /* SettingViewController.swift */,
+				75650EEC2098A54A00FAD8FE /* PictureViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -166,6 +179,7 @@
 				7574EB33209214F100F4169D /* Sources */,
 				7574EB34209214F100F4169D /* Frameworks */,
 				7574EB35209214F100F4169D /* Resources */,
+				3D485C4BAFEE6D00199E80E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,8 +228,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				753B011F2098669900DF411C /* icons8-settings.png in Resources */,
+				753B0121209866B100DF411C /* icons8-picture.png in Resources */,
 				7574EB48209214F200F4169D /* LaunchScreen.storyboard in Resources */,
 				7574EB45209214F200F4169D /* Assets.xcassets in Resources */,
+				753B0123209866C200DF411C /* icons8-camera.png in Resources */,
 				7574EB40209214F100F4169D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +240,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3D485C4BAFEE6D00199E80E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IMGVision/Pods-IMGVision-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CircleMenu/CircleMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IMGVision/Pods-IMGVision-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F7D41237C94E7CFB7DAC6DDB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,8 +290,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7574EB3D209214F100F4169D /* ViewController.swift in Sources */,
+				75650EE92098A53300FAD8FE /* CameraViewController.swift in Sources */,
 				7574EB3B209214F100F4169D /* AppDelegate.swift in Sources */,
 				7574EB43209214F100F4169D /* IMGVision.xcdatamodeld in Sources */,
+				75650EED2098A54A00FAD8FE /* PictureViewController.swift in Sources */,
+				75650EE72098A4F700FAD8FE /* HomeViewController.swift in Sources */,
+				75650EEB2098A53D00FAD8FE /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@ target 'IMGVision' do
   pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
   pod 'Hero'
   pod 'SwiftyJSON'
+  pod 'CircleMenu'
   # Pods for IMGVision
 
 end
