@@ -10,6 +10,7 @@ import UIKit
 import Hero
 import CircleMenu
 
+
 extension UIColor {
     static func color(_ red: Int, green: Int, blue: Int, alpha: Float) -> UIColor {
         return UIColor(
@@ -31,12 +32,12 @@ extension UIImage {
         return reSizeImage;
     }
 
-    
     func scaleImage(scaleSize:CGFloat)->UIImage {
         let reSize = CGSize(width: self.size.width * scaleSize, height: self.size.height * scaleSize)
         return reSizeImage(reSize: reSize)
     }
 }
+
 
 class HomeViewController: UIViewController, CircleMenuDelegate {
     
@@ -73,10 +74,7 @@ class HomeViewController: UIViewController, CircleMenuDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-
     }
-
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -85,13 +83,7 @@ class HomeViewController: UIViewController, CircleMenuDelegate {
     
     func circleMenu(_: CircleMenu, willDisplay button: UIButton, atIndex: Int) {
         button.backgroundColor = items[atIndex].color
-        //button.backgroundColor = UIColor.clear
-        
         button.setImage(UIImage(named: items[atIndex].icon)?.scaleImage(scaleSize: 0.9), for: .normal)
-//        button.imageView?.contentMode = .scaleAspectFit
-//        button.contentHorizontalAlignment = .fill
-//        button.contentVerticalAlignment = .fill
-//        button.contentScaleFactor = 0.5
         
         // set highlited image
         let highlightedImage = UIImage(named: items[atIndex].icon)?.withRenderingMode(.alwaysTemplate)
