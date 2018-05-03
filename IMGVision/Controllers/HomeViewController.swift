@@ -41,10 +41,10 @@ extension UIImage {
 
 class HomeViewController: UIViewController, CircleMenuDelegate {
     
-    let items: [(icon: String, color: UIColor)] = [
-        ("icons8-camera", UIColor.color(253, green: 200, blue: 58, alpha: 1)),//253    200    58
-        ("icons8-picture", UIColor.color(29, green: 148, blue: 79, alpha: 1)),//29    148    79
-        ("icons8-settings", UIColor.color(56, green: 112, blue: 240, alpha: 1))//56    112    240
+    let items: [(icon: String, color: UIColor, view: UIViewController)] = [
+        ("icons8-camera", UIColor.color(253, green: 200, blue: 58, alpha: 1), CameraViewController()),//253    200    58
+        ("icons8-picture", UIColor.color(29, green: 148, blue: 79, alpha: 1), PictureViewController()),//29    148    79
+        ("icons8-settings", UIColor.color(56, green: 112, blue: 240, alpha: 1), SettingViewController())//56    112    240
         ]
     
     override func viewDidLoad() {
@@ -53,20 +53,33 @@ class HomeViewController: UIViewController, CircleMenuDelegate {
         let homeCircleButton = CircleMenu(
             frame: CGRect(x: 100,
                           y: 100,
-                          width: self.view.frame.width/6,
-                          height: self.view.frame.width/6),
+                          width: self.view.frame.width*0.2,
+                          height: self.view.frame.width*0.2),
             normalIcon:"icons8-top_menu",
             selectedIcon:"icons8-top_menu_filled",
             buttonsCount: 3,
             duration: 2,
             distance: 140)
-        
         homeCircleButton.delegate = self
-        homeCircleButton.center.x = self.view.bounds.width/2
-        homeCircleButton.center.y = self.view.bounds.height/2
-        homeCircleButton.layer.cornerRadius = homeCircleButton.bounds.size.width / 2.0
-       // homeCircleButton.backgroundColor = UIColor.color(94, green: 94, blue: 94, alpha: 1.0)
-            
+        homeCircleButton.center = CGPoint(x: self.view.bounds.width*0.5,
+                                          y: self.view.bounds.height*0.5)
+        homeCircleButton.layer.cornerRadius = homeCircleButton.bounds.size.width*0.5
+        //homeCircleButton.backgroundColor = UIColor.color(94, green: 94, blue: 94, alpha: 1.0)
+        
+        let titleLabel = UILabel(
+            frame: CGRect(x: 0,
+                          y: 0,
+                          width: self.view.frame.width*0.6,
+                          height: self.view.frame.height*0.3))
+        titleLabel.center = CGPoint(x: self.view.bounds.width*0.5,
+                                    y: self.view.bounds.height*0.2)
+        titleLabel.text = "IMGVision"
+        titleLabel.font = UIFont(name: "Futura-Medium" , size: 50)
+        titleLabel.textColor = UIColor.color(76, green: 80, blue: 84, alpha: 1.0)//76    80    84
+        titleLabel.textAlignment = NSTextAlignment.center
+        titleLabel.adjustsFontSizeToFitWidth = true
+        
+        self.view.addSubview(titleLabel)
         self.view.addSubview(homeCircleButton)
         self.view.backgroundColor =  UIColor.color(242, green: 242, blue: 242, alpha: 1.0)
         
@@ -93,16 +106,15 @@ class HomeViewController: UIViewController, CircleMenuDelegate {
     
     func circleMenu(_: CircleMenu, buttonWillSelected : UIButton, atIndex: Int) {
         buttonWillSelected.isEnabled = false
-        print("button will selected: \(atIndex)")
     }
     
     func circleMenu(_: CircleMenu, buttonDidSelected : UIButton, atIndex: Int) {
+        items[atIndex].view.modalTransitionStyle = .crossDissolve
+        self.present(items[atIndex].view, animated: true, completion: nil)
         buttonDidSelected.isEnabled = true
-        print("button did selected: \(atIndex)")
     }
     
     func menuCollapsed(_ circleMenu: CircleMenu) {
-        print(circleMenu)
     }
     
 

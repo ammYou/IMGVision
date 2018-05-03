@@ -12,8 +12,14 @@ class PictureViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.color(29, green: 148, blue: 79, alpha: 1.0)
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        sleep(3)
+        dismiss(animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

@@ -12,8 +12,13 @@ class CameraViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor.color(253, green: 200, blue: 58, alpha: 1.0)
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        sleep(3)
+        dismiss(animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
