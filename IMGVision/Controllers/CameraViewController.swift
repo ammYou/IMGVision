@@ -9,17 +9,22 @@
 import UIKit
 
 class CameraViewController: UIViewController {
-
+    let cameraViewController = ImageViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.color(253, green: 200, blue: 58, alpha: 1.0)
+        self.view.addSubview(cameraViewController.view)
+        self.cameraViewController.modalPresentationStyle = .currentContext
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        sleep(3)
+        cameraViewController.openCameraView()
         dismiss(animated: true, completion: nil)
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
