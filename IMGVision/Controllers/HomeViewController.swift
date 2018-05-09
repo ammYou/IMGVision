@@ -22,7 +22,7 @@ class HomeViewController: UIViewController, CircleMenuDelegate {
     override func loadView() {
         super.loadView()
         let titleLabel = TitleView(root: self)
-        let homeCircleButton = CircleView(root: self)
+        let homeCircleButton = CircleMenuView(root: self)
         self.view.addSubview(titleLabel)
         self.view.addSubview(homeCircleButton)
     }

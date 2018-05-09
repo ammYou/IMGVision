@@ -12,7 +12,7 @@ class TitleView: UIView {
     var view = UIView()
     
     init(root: UIViewController) {
-        super.init(frame: view.frame)
+        super.init(frame: root.view.frame)
         self.view = root.view
         let titleLabel = UILabel(
             frame: CGRect(x: 0,
