@@ -11,9 +11,9 @@ import UIKit
 class TitleView: UIView {
     var view = UIView()
     
-    init(view:UIView) {
+    init(root: UIViewController) {
         super.init(frame: view.frame)
-        self.view = view
+        self.view = root.view
         let titleLabel = UILabel(
             frame: CGRect(x: 0,
                           y: 0,

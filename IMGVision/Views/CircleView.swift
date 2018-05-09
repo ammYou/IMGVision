@@ -9,13 +9,13 @@
 import UIKit
 import CircleMenu
 
-class CircleView: UIView, CircleMenuDelegate {
+class CircleView: UIView{
     var view = UIView()
-    var parentView = ViewController()
+    var parentView = UIViewController()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
+    init(root: UIViewController) {
+        super.init(frame: view.frame)
+        self.view = root.view//view
         let homeCircleButton = CircleMenu(
             frame: CGRect(x: 100,
                           y: 100,
@@ -26,10 +26,12 @@ class CircleView: UIView, CircleMenuDelegate {
             buttonsCount: 3,
             duration: 2,
             distance: 140)
-        homeCircleButton.delegate = self
+        homeCircleButton.delegate = root
         homeCircleButton.center = CGPoint(x: self.view.bounds.width*0.5,
                                           y: self.view.bounds.height*0.5)
         homeCircleButton.layer.cornerRadius = homeCircleButton.bounds.size.width*0.5
+        
+        addSubview(homeCircleButton)
         //homeCircleButton.backgroundColor = UIColor.color(94, green: 94, blue: 94, alpha: 1.0)
     }
     
