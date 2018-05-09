@@ -20,7 +20,7 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
         //button.addTarget(self, action: #selector(ViewController.buttonClick(sender:)), for: .touchUpInside)
         //UIImageViewの設定
         imageView = UIImageView()
-        imageView.frame = CGRect(x:0,y:self.view.frame.height / 2 - 150,width:self.view.frame.width,height:300)
+        imageView.frame = CGRect(x:0,y:self.view.frame.height / 2 - 150,width:self.view.frame.width,height:self.view.frame.height)
         //delegateを設定
         imagePicker.delegate = self
         //viewに追加
@@ -29,7 +29,7 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     func openPhotoLibraryView() {
         //写真選択後の修正をOFFにする
-        imagePicker.allowsEditing = false
+        imagePicker.allowsEditing = true
         //写真ライブラリを開く設定(カメラを起動することも可)
         imagePicker.sourceType = .photoLibrary
         //写真ライブラリを開く
@@ -38,7 +38,7 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     func openCameraView() {
         //写真選択後の修正をOFFにする
-        imagePicker.allowsEditing = false
+        //imagePicker.allowsEditing = true
         //写真ライブラリを開く設定(カメラを起動することも可)
         imagePicker.sourceType = .camera
         //写真ライブラリを開く
@@ -56,6 +56,7 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
         }
         //写真ライブラリを閉じる
         picker.dismiss(animated: true, completion: nil)
+        self.present(PictureViewController(), animated: true, completion: nil)
     }
     
     //キャンセルが押された時の処理

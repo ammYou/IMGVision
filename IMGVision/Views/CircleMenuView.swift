@@ -33,9 +33,6 @@ class CircleMenuView: UIView {
         //homeCircleButton.backgroundColor = UIColor.color(94, green: 94, blue: 94, alpha: 1.0)
     }
     
-   
-    
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

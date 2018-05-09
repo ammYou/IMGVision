@@ -60,7 +60,6 @@ class HomeViewController: UIViewController, CircleMenuDelegate {
     
     func circleMenu(_: CircleMenu, buttonDidSelected : UIButton, atIndex: Int) {
         items[atIndex].view.modalTransitionStyle = .crossDissolve
-        
         self.present(items[atIndex].view, animated: true, completion: nil)
         buttonDidSelected.isEnabled = true
     }
