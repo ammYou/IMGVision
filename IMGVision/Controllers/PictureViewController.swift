@@ -43,10 +43,8 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     
     func openPhotoLibraryView() {
-        imagePicker.setEditing(true, animated: true)
-        imagePicker.preferredContentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
         //写真選択後の修正をOFFにする
-        imagePicker.allowsEditing = true
+        //imagePicker.allowsEditing = true
         //写真ライブラリを開く設定(カメラを起動することも可)
         imagePicker.sourceType = .photoLibrary
         //写真ライブラリを開く
