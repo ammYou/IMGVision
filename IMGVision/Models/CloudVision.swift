@@ -22,7 +22,7 @@ func postCloudVision(image: UIImage){
 }
 
 func createCloudVisionRequest(with binaryImage: String)->URLRequest{
-    var googleAPIKey = "AIzaSyAlE_Wqqpyu6_Dr53UZEO8lmPzCGHF2FMM"
+    var googleAPIKey = ""
     var googleURL: URL {
         return URL(string: "https://vision.googleapis.com/v1/images:annotate?key=\(googleAPIKey)")!
     }
