@@ -20,7 +20,13 @@
 		7574EB43209214F100F4169D /* IMGVision.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7574EB41209214F100F4169D /* IMGVision.xcdatamodeld */; };
 		7574EB45209214F200F4169D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7574EB44209214F200F4169D /* Assets.xcassets */; };
 		7574EB48209214F200F4169D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7574EB46209214F200F4169D /* LaunchScreen.storyboard */; };
-		759A4F1B20A04E1900CE2755 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759A4F1A20A04E1900CE2755 /* ImageViewController.swift */; };
+		75758CD720A5CF4900BD3610 /* CloudVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75758CD620A5CF4900BD3610 /* CloudVision.swift */; };
+		75758CDB20A5D0A700BD3610 /* ImageChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75758CDA20A5D0A700BD3610 /* ImageChanger.swift */; };
+		75758CDF20A5D28C00BD3610 /* fileprivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75758CDE20A5D28C00BD3610 /* fileprivate.swift */; };
+		75758CE120A5D50F00BD3610 /* AnalyzeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75758CE020A5D50F00BD3610 /* AnalyzeViewController.swift */; };
+		75758CE320A5E52900BD3610 /* HttpHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75758CE220A5E52900BD3610 /* HttpHandler.swift */; };
+		75758CE520A5E69A00BD3610 /* Jsoner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75758CE420A5E69A00BD3610 /* Jsoner.swift */; };
+		75758CE720A5E8C300BD3610 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75758CE620A5E8C300BD3610 /* Log.swift */; };
 		75C730A320A1FE5000585152 /* CircleMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C730A220A1FE5000585152 /* CircleMenuView.swift */; };
 		75C730A520A2025E00585152 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C730A420A2025E00585152 /* TitleView.swift */; };
 		75C730A720A20A2100585152 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C730A620A20A2100585152 /* extension.swift */; };
@@ -44,7 +50,13 @@
 		7574EB44209214F200F4169D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7574EB47209214F200F4169D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7574EB49209214F200F4169D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		759A4F1A20A04E1900CE2755 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		75758CD620A5CF4900BD3610 /* CloudVision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudVision.swift; sourceTree = "<group>"; };
+		75758CDA20A5D0A700BD3610 /* ImageChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageChanger.swift; sourceTree = "<group>"; };
+		75758CDE20A5D28C00BD3610 /* fileprivate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fileprivate.swift; sourceTree = "<group>"; };
+		75758CE020A5D50F00BD3610 /* AnalyzeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeViewController.swift; sourceTree = "<group>"; };
+		75758CE220A5E52900BD3610 /* HttpHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHandler.swift; sourceTree = "<group>"; };
+		75758CE420A5E69A00BD3610 /* Jsoner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jsoner.swift; sourceTree = "<group>"; };
+		75758CE620A5E8C300BD3610 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		75C730A220A1FE5000585152 /* CircleMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleMenuView.swift; sourceTree = "<group>"; };
 		75C730A420A2025E00585152 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		75C730A620A20A2100585152 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
@@ -125,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				75C730A620A20A2100585152 /* extension.swift */,
+				75758CDE20A5D28C00BD3610 /* fileprivate.swift */,
+				75758CE620A5E8C300BD3610 /* Log.swift */,
 			);
 			path = Utilitie;
 			sourceTree = "<group>";
@@ -139,6 +153,7 @@
 		7574EB53209215C300F4169D /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				75758CE220A5E52900BD3610 /* HttpHandler.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -146,11 +161,11 @@
 		7574EB54209215D400F4169D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				759A4F1A20A04E1900CE2755 /* ImageViewController.swift */,
 				75650EE62098A4F700FAD8FE /* HomeViewController.swift */,
 				75650EE82098A53300FAD8FE /* CameraViewController.swift */,
 				75650EEC2098A54A00FAD8FE /* PictureViewController.swift */,
 				75650EEA2098A53D00FAD8FE /* SettingViewController.swift */,
+				75758CE020A5D50F00BD3610 /* AnalyzeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -158,6 +173,9 @@
 		7574EB56209215E500F4169D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				75758CD620A5CF4900BD3610 /* CloudVision.swift */,
+				75758CDA20A5D0A700BD3610 /* ImageChanger.swift */,
+				75758CE420A5E69A00BD3610 /* Jsoner.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -302,12 +320,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				75C730A320A1FE5000585152 /* CircleMenuView.swift in Sources */,
-				759A4F1B20A04E1900CE2755 /* ImageViewController.swift in Sources */,
 				7574EB3D209214F100F4169D /* ViewController.swift in Sources */,
+				75758CDB20A5D0A700BD3610 /* ImageChanger.swift in Sources */,
 				75650EE92098A53300FAD8FE /* CameraViewController.swift in Sources */,
 				7574EB3B209214F100F4169D /* AppDelegate.swift in Sources */,
 				7574EB43209214F100F4169D /* IMGVision.xcdatamodeld in Sources */,
 				75650EED2098A54A00FAD8FE /* PictureViewController.swift in Sources */,
+				75758CDF20A5D28C00BD3610 /* fileprivate.swift in Sources */,
+				75758CE720A5E8C300BD3610 /* Log.swift in Sources */,
+				75758CE520A5E69A00BD3610 /* Jsoner.swift in Sources */,
+				75758CE120A5D50F00BD3610 /* AnalyzeViewController.swift in Sources */,
+				75758CD720A5CF4900BD3610 /* CloudVision.swift in Sources */,
+				75758CE320A5E52900BD3610 /* HttpHandler.swift in Sources */,
 				75C730A720A20A2100585152 /* extension.swift in Sources */,
 				75650EE72098A4F700FAD8FE /* HomeViewController.swift in Sources */,
 				75650EEB2098A53D00FAD8FE /* SettingViewController.swift in Sources */,
@@ -388,12 +412,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -442,11 +467,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

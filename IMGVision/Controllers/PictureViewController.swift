@@ -62,6 +62,8 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
             imageView.contentMode = .scaleAspectFit
             //画像を設定
             imageView.image = image
+            postCloudVision(image: image)
+            DispatchQueue.global().async { }
         }
         //写真ライブラリを閉じる
         picker.dismiss(animated: true, completion: nil)
