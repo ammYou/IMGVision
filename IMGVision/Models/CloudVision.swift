@@ -11,18 +11,19 @@ import UIKit
 import SwiftyJSON
 
 
-func postCloudVision(image: UIImage){
+func postCloudVision(image: UIImage) -> URLRequest{
     Debug.log("start posting")
     let httpManager = HttpHandler()
     let binaryImagedata = base64EncodeImage(image)
     let request = createCloudVisionRequest(with: binaryImagedata)
     let response = httpManager.doRequest(request: request)
-    let responsDic = jsonParser(response)
     Debug.log("finish posting")
+    return request
+    
 }
 
 func createCloudVisionRequest(with binaryImage: String)->URLRequest{
-    var googleAPIKey = "AIzaSyAlE_Wqqpyu6_Dr53UZEO8lmPzCGHF2FMM"
+    var googleAPIKey = ""
     var googleURL: URL {
         return URL(string: "https://vision.googleapis.com/v1/images:annotate?key=\(googleAPIKey)")!
     }
@@ -51,7 +52,6 @@ func createCloudVisionRequest(with binaryImage: String)->URLRequest{
     ]
     
     let jsonObject = JSON(jsonRequest)
-    print(jsonObject)
     guard let data = try? jsonObject.rawData() else {
         return URLRequest(url: URL(string: "")!)
     }

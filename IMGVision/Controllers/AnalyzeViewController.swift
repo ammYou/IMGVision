@@ -7,12 +7,12 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class AnalyzeViewController: UIViewController {
-
+    var testLabel = UILabel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        var testLabel = UILabel()
         testLabel.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         testLabel.backgroundColor = UIColor.darkGray
         // Do any additional setup after loading the view.
@@ -24,6 +24,7 @@ class AnalyzeViewController: UIViewController {
     }
     
 
+    
     /*
     // MARK: - Navigation
 

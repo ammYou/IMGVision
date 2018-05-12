@@ -9,13 +9,9 @@
 import Foundation
 import SwiftyJSON
 
-func jsonParser(_ datas: Data)->Dictionary<String, Any>{
-    DispatchQueue.main.async(execute: {
-        // Use SwiftyJSON to parse results
-        let json = JSON(datas)
-        let errorObj: JSON = json["error"]
-        print(json)
-    })
-        
-    return Dictionary()
+func jsonParser(_ datas: Data)->JSON{
+    let json = JSON(datas)
+    let errorObj: JSON = json["error"]
+    
+    return json
 }

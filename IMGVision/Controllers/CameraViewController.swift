@@ -61,13 +61,12 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             imageView.contentMode = .scaleAspectFit
             //画像を設定
             imageView.image = image
-            postCloudVision(image: image)
-            DispatchQueue.global().async { }
+            DispatchQueue.global().async {self.getData(request: postCloudVision(image: image))}
             
         }
         //写真ライブラリを閉じる
         picker.dismiss(animated: true, completion: nil)
-        self.dismiss(animated: true, completion: nil)
+        //self.dismiss(animated: true, completion: nil)
         
     }
     
@@ -81,7 +80,23 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
     }
     
-    
+    func getData(request: URLRequest){
+        var session = URLSession.shared
+        Debug.log("start HTTP \n \(request)")
+        var responseData = Dictionary<String, Any>(
+        )
+        let task: URLSessionDataTask = session.dataTask(with: request) { (data, response, error) in
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription ?? "jp")
+                return
+            }
+            //print(data,responseData,error as Any)
+            print(jsonParser(data))
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+        task.resume()
+    }
     
 
     override func didReceiveMemoryWarning() {
