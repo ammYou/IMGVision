@@ -16,7 +16,7 @@ func base64EncodeImage(_ image: UIImage) -> String {
     if ((imagedata?.count)! > 2097152) {
         let oldSize: CGSize = image.size
         let newSize: CGSize = CGSize(width: 800, height: oldSize.height / oldSize.width * 800)
-        //imagedata = resizeImage(newSize, image: image)
+        imagedata = resizeImage(newSize, image: image)
     }
     
     return imagedata!.base64EncodedString(options: .endLineWithCarriageReturn)

@@ -39,6 +39,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     override func viewWillDisappear(_ animated: Bool) {
         self.viewFlag = true
+        imageView.image = nil
     }
     
     func openCameraView() {

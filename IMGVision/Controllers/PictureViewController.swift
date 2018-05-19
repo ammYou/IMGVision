@@ -39,6 +39,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewWillDisappear(_ animated: Bool) {
         self.viewFlag = true
+        imageView.image = nil
     }
 
     
@@ -79,8 +80,6 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.dismiss(animated: true, completion: nil)
         
     }
-    
-    
     
     func getData(request: URLRequest){
         var session = URLSession.shared
