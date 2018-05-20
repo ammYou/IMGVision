@@ -16,7 +16,7 @@ func postCloudVision(image: UIImage) -> URLRequest{
     let httpManager = HttpHandler()
     let binaryImagedata = base64EncodeImage(image)
     let request = createCloudVisionRequest(with: binaryImagedata)
-    let response = httpManager.doRequest(request: request)
+    //let response = httpManager.doRequest(request: request)
     Debug.log("finish posting")
     return request
     
@@ -39,14 +39,24 @@ func createCloudVisionRequest(with binaryImage: String)->URLRequest{
                 "content": binaryImage
             ],
             "features": [
-                [
-                    "type": "LABEL_DETECTION",
-                    "maxResults": 10
-                ],
-                [
-                    "type": "FACE_DETECTION",
-                    "maxResults": 10
-                ]
+                ["type": "FACE_DETECTION",
+                 "maxResults": 10],
+                ["type": "LANDMARK_DETECTION",
+                 "maxResults": 10],
+                ["type": "LOGO_DETECTION",
+                 "maxResults": 10],
+                ["type": "LABEL_DETECTION",
+                 "maxResults": 10],
+                ["type": "TEXT_DETECTION",
+                 "maxResults": 10],
+                ["type": "SAFE_SEARCH_DETECTION",
+                 "maxResults": 10],
+                ["type": "IMAGE_PROPERTIES",
+                 "maxResults": 10],
+                ["type": "WEB_DETECTION",
+                 "maxResults": 10],
+                ["type": "DOCUMENT_TEXT_DETECTION",
+                 "maxResults": 10],
             ]
         ]
     ]
