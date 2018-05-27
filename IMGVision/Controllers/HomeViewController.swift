@@ -12,7 +12,6 @@ import CircleMenu
 
 
 class HomeViewController: UIViewController, CircleMenuDelegate {
-    private let mModel = HomeViewModel()
     private let items: [(icon: String, color: UIColor, view: UIViewController)] = [
         ("icons8-camera", UIColor.color(253, green: 200, blue: 58, alpha: 1), CameraViewController()),//253    200    58
         ("icons8-picture", UIColor.color(29, green: 148, blue: 79, alpha: 1), PictureViewController()),//29    148    79
@@ -24,7 +23,6 @@ class HomeViewController: UIViewController, CircleMenuDelegate {
         super.loadView()
         let titleLabel = TitleView(root: self)
         let homeCircleButton = CircleMenuView(root: self)
-        self.view = HomeView(model: mModel)
         self.view.addSubview(titleLabel)
         self.view.addSubview(homeCircleButton)
     }
