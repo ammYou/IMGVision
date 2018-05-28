@@ -64,10 +64,13 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
             //画像を設定
             imageView.image = image
             DispatchQueue.global().async {self.getData(request: postCloudVision(image: image))}
+            DispatchQueue.main.async {
+                self.dismiss(animated: true, completion: nil)
+            }
         }
         //写真ライブラリを閉じる
         picker.dismiss(animated: true, completion: nil)
-        //self.dismiss(animated: true, completion: nil)
+    
         
     }
     

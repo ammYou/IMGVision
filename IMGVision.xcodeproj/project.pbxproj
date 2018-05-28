@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		750A02BB20BAF6AE0040FA6D /* Annonate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A02BA20BAF6AE0040FA6D /* Annonate.swift */; };
 		753B011F2098669900DF411C /* icons8-settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 753B011E2098669900DF411C /* icons8-settings.png */; };
 		753B0121209866B100DF411C /* icons8-picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 753B0120209866B100DF411C /* icons8-picture.png */; };
 		753B0123209866C200DF411C /* icons8-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 753B0122209866C200DF411C /* icons8-camera.png */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		73512EE33AEA8B4286808ACA /* Pods-IMGVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMGVision.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMGVision/Pods-IMGVision.release.xcconfig"; sourceTree = "<group>"; };
+		750A02BA20BAF6AE0040FA6D /* Annonate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annonate.swift; sourceTree = "<group>"; };
 		753B011E2098669900DF411C /* icons8-settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-settings.png"; sourceTree = "<group>"; };
 		753B0120209866B100DF411C /* icons8-picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-picture.png"; sourceTree = "<group>"; };
 		753B0122209866C200DF411C /* icons8-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-camera.png"; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				75758CD620A5CF4900BD3610 /* CloudVision.swift */,
 				75758CDA20A5D0A700BD3610 /* ImageChanger.swift */,
 				75758CE420A5E69A00BD3610 /* Jsoner.swift */,
+				750A02BA20BAF6AE0040FA6D /* Annonate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				7574EB3B209214F100F4169D /* AppDelegate.swift in Sources */,
 				7574EB43209214F100F4169D /* IMGVision.xcdatamodeld in Sources */,
 				75650EED2098A54A00FAD8FE /* PictureViewController.swift in Sources */,
+				750A02BB20BAF6AE0040FA6D /* Annonate.swift in Sources */,
 				75758CDF20A5D28C00BD3610 /* fileprivate.swift in Sources */,
 				75758CE720A5E8C300BD3610 /* Log.swift in Sources */,
 				75758CE520A5E69A00BD3610 /* Jsoner.swift in Sources */,
