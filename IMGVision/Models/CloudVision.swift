@@ -11,7 +11,7 @@ import UIKit
 import SwiftyJSON
 
 
-func postCloudVision(image: UIImage) -> URLRequest{
+func makeCloudVisionRequest(image: UIImage) -> URLRequest{
     Debug.log("start posting")
     let httpManager = HttpHandler()
     let binaryImagedata = base64EncodeImage(image)
@@ -31,7 +31,7 @@ func createCloudVisionRequest(with binaryImage: String)->URLRequest{
     request.httpMethod = "POST"
     request.addValue("application/json", forHTTPHeaderField: "Content-Type")
     request.addValue(Bundle.main.bundleIdentifier ?? "", forHTTPHeaderField: "X-Ios-Bundle-Identifier")
-    
+    let cout = 1
     // Build our API request
     let jsonRequest = [
         "requests": [
@@ -40,23 +40,23 @@ func createCloudVisionRequest(with binaryImage: String)->URLRequest{
             ],
             "features": [
                 ["type": "FACE_DETECTION",
-                 "maxResults": 10],
+                 "maxResults": cout],
                 ["type": "LANDMARK_DETECTION",
-                 "maxResults": 10],
+                 "maxResults": cout],
                 ["type": "LOGO_DETECTION",
-                 "maxResults": 10],
+                 "maxResults": cout],
                 ["type": "LABEL_DETECTION",
-                 "maxResults": 10],
+                 "maxResults": cout],
                 ["type": "TEXT_DETECTION",
-                 "maxResults": 10],
+                 "maxResults": cout],
                 ["type": "SAFE_SEARCH_DETECTION",
-                 "maxResults": 10],
+                 "maxResults": cout],
                 ["type": "IMAGE_PROPERTIES",
-                 "maxResults": 10],
+                 "maxResults": cout],
                 ["type": "WEB_DETECTION",
-                 "maxResults": 10],
+                 "maxResults": cout],
                 ["type": "DOCUMENT_TEXT_DETECTION",
-                 "maxResults": 10],
+                 "maxResults": cout],
             ]
         ]
     ]

@@ -10,7 +10,7 @@ import UIKit
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var rootViewController:UIViewController?
-    var viewFlag = false
+    var viewFlag = 0
     //変数の宣言
     var imageView:UIImageView!
     let imagePicker = UIImagePickerController()
@@ -26,61 +26,54 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         imagePicker.delegate = self
         //viewに追加
         self.view.addSubview(imageView)
-        self.viewFlag = true
+        self.viewFlag = 0
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if self.viewFlag {
+        if self.viewFlag == 0 {
+            self.viewFlag += 1
             openCameraView()
-            viewFlag = false
+        }else if self.viewFlag == 2{
+            self.viewFlag -= 1
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        self.viewFlag = true
+        self.viewFlag -= 1
         imageView.image = nil
     }
     
     func openCameraView() {
-        
+        self.viewFlag += 1
         //写真選択後の修正をOFFにする
         ///imagePicker.allowsEditing = true
         //写真ライブラリを開く設定(カメラを起動することも可)
         imagePicker.sourceType = .camera
         //写真ライブラリを開く
         present(imagePicker,animated: true,completion: nil)
-        self.viewFlag = false
     }
     
     //写真が選択された時の処理
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        self.viewFlag = false
         //選択された画像を保存
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
             //比率を変えずに画像を表示する(空白が生じる)
             imageView.contentMode = .scaleAspectFit
             //画像を設定
             imageView.image = image
-            DispatchQueue.global().async {self.getData(request: postCloudVision(image: image))}
-            DispatchQueue.main.async {
-                self.dismiss(animated: true, completion: nil)
-            }
+            DispatchQueue.global().async {self.getData(request: makeCloudVisionRequest(image: image))}
         }
         //写真ライブラリを閉じる
         picker.dismiss(animated: true, completion: nil)
-        //self.dismiss(animated: true, completion: nil)
-        
     }
     
     //キャンセルが押された時の処理
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        self.viewFlag = false
-        
         //写真ライブラリを閉じる
         picker.dismiss(animated: true, completion: nil)
         self.dismiss(animated: true, completion: nil)
-        
     }
     
     func getData(request: URLRequest){
@@ -91,12 +84,18 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         let task: URLSessionDataTask = session.dataTask(with: request) { (data, response, error) in
             guard let data = data, error == nil else {
                 print(error?.localizedDescription ?? "jp")
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true, completion: nil)
+                }
                 return
             }
-            //print(data,responseData,error as Any)
-            print(jsonParser(data))
-            
-            self.dismiss(animated: true, completion: nil)
+            let datas = jsonParser(data)
+            DispatchQueue.main.async {
+                let new = AnalyzeViewController()
+                new.datas = datas
+                self.viewFlag += 1
+                self.present(new, animated: true, completion: nil)
+            }
         }
         task.resume()
     }

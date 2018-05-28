@@ -9,9 +9,8 @@
 import Foundation
 import SwiftyJSON
 
-func jsonParser(_ datas: Data)->JSON{
-    let json = JSON(datas)
-    let errorObj: JSON = json["error"]
-    
-    return json
+func jsonParser(_ datas: Data)->Annonate {
+    let annonate = try? JSONDecoder().decode(Annonate.self, from: datas)
+    print(annonate!.responses![0].webDetection!.fullMatchingImages![0])
+    return annonate!
 }

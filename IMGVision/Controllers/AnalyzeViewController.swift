@@ -11,11 +11,20 @@ import SwiftyJSON
 
 class AnalyzeViewController: UIViewController {
     var testLabel = UILabel()
+    var datas:Annonate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         testLabel.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-        testLabel.backgroundColor = UIColor.darkGray
+        testLabel.backgroundColor = UIColor.lightGray
+        self.view.backgroundColor = UIColor.darkGray
         // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        sleep(2)
+        print(datas)
+        presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
